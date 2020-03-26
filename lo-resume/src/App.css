@@ -1,0 +1,12 @@
+@import './components/Layout.css';
+.App {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 15px;
+  background-image: url("./assets/software.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
