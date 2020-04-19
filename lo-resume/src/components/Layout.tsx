@@ -1,31 +1,17 @@
 import React from 'react';
 
-interface State {
-    background: string;
-}
-
 interface Props {
     background: string;
+    backgroundImage: string;
+    size: number;
+    gridColumn: number;
 }
 
-export default class Layout extends React.Component<Props, State> {
-    constructor(props: Props) {
-        super(props);
-        this.setState({
-            background: this.props.background
-        })
-    }
-
-    // componentWillReceiveProps(props: Props) {
-    //     this.setState({
-    //         background: props.background
-    //     })
-    // }
-
+export default class Layout extends React.Component<Props, {}> {
     render() {
         return (
-            <div className="item" style={{ background: this.props.background }}>
-                <label>Lukas</label>
+            <div className="item" style={{ gridColumn: this.props.gridColumn, background: this.props.background, width: this.props.size, height: this.props.size }}>
+                <img className="image" src={require("../assets/" + this.props.backgroundImage)} alt="logo" />
             </div >
         );
     }
