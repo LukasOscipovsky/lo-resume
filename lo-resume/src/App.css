@@ -1,5 +1,5 @@
-@import './components/Layout.css';
-@import './components/Links.css';
+@import './components/Menu.css';
+
 .app {
   position: absolute;
   /* background: #69bcf4, #30cc8b; */
@@ -11,38 +11,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-
-.menu {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  -webkit-animation: bounce 1s normal;
-}
-
-.menu .burger {
-  width: 35px;
-  border-radius: 50%;
-}
-
-.menu .info {
-  visibility: hidden;
-}
-
-.menu:hover .info {
-  visibility: visible;
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 40px;
-  right: 40px;
-  border: 2px solid black;
-  border-radius: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: white;
 }
 
 .app .viewmore {
