@@ -34,9 +34,9 @@
 }
 
 .spin:hover::before {
-    border-top-color: black;
-    border-right-color: black;
-    border-bottom-color: black;
+    border-top-color: red;
+    border-right-color: yellow;
+    border-bottom-color: pink;
     transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.10s, border-bottom-color 0.15s linear 0.20s;
 }
 
@@ -68,17 +68,27 @@
 }
 
 .menuinfo {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+    visibility: hidden;
     border-radius: 100%;
     background: white;
-    position: fixed;
+    position: absolute;
     top: 70px;
     right: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+}
+
+.menuinfo::before,
+.menuinfo::after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .menuinfo .linkedin, .email, .mobile {
@@ -91,4 +101,8 @@
 .menuinfo .linkedin .link, .email .link, .mobile .link {
     font-family: 'Cardo-Bold';
     font-size: 15px;
+}
+
+.menu:hover + .menuinfo {
+    visibility: visible;
 }

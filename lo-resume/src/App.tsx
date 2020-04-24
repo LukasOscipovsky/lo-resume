@@ -27,7 +27,7 @@ export default function App() {
       <div className="viewmore" onClick={e => alert("Clicked")}>
         <img className="arrow" src={require("./assets/doublearrow.png")} alt="logo" />
       </div>
-      <Menu />
+      <Menu info={me.info} />
     </div>
   );
 }
