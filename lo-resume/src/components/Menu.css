@@ -9,8 +9,7 @@
     align-items: center;
 }
 
-.menu::before,
-.menu::after {
+.menu::before, .menu::after {
     box-sizing: border-box;
     content: '';
     position: absolute;
@@ -23,8 +22,7 @@
     width: 50px;
 }
 
-.spin::before,
-.spin::after {
+.spin::before, .spin::after {
     top: 0;
     right: 0;
 }
@@ -34,9 +32,9 @@
 }
 
 .spin:hover::before {
-    border-top-color: red;
-    border-right-color: yellow;
-    border-bottom-color: pink;
+    border-top-color: black;
+    border-right-color: black;
+    border-bottom-color: black;
     transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.10s, border-bottom-color 0.15s linear 0.20s;
 }
 
@@ -57,12 +55,11 @@
     box-shadow: none;
 }
 
-.circle::before,
-.circle::after {
+.circle::before, .circle::after {
     border-radius: 50%;
 }
 
-.burger{
+.burger {
     height: 50px;
     width: 50px;
 }
@@ -70,7 +67,6 @@
 .menuinfo {
     width: 250px;
     height: 250px;
-    visibility: hidden;
     border-radius: 100%;
     background: white;
     position: absolute;
@@ -82,8 +78,7 @@
     align-items: center;
 }
 
-.menuinfo::before,
-.menuinfo::after {
+.menuinfo::before, .menuinfo::after {
     box-sizing: border-box;
     content: '';
     position: absolute;
@@ -101,8 +96,4 @@
 .menuinfo .linkedin .link, .email .link, .mobile .link {
     font-family: 'Cardo-Bold';
     font-size: 15px;
-}
-
-.menu:hover + .menuinfo {
-    visibility: visible;
 }
