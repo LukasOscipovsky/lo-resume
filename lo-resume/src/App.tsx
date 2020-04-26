@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Menu from './components/Menu'
+import MainPage from './components/pages/MainPage'
+import JavaPage from './components/pages/JavaPage'
 
 const me = {
   name: "LUKAS OSCIPOVSKY",
@@ -16,18 +18,36 @@ const me = {
   }
 }
 
+interface State {
+  i: number;
+}
+export default class App extends React.Component<{}, State> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      i: 0
+    }
+  }
 
-export default function App() {
-  return (
-    <div className="app">
-      <div className="info">
-        <label className="name">{me.name}</label>
-        <label className="role">{me.role.join(",")}</label>
+  r() {
+    console.log(this.state.i)
+    if (this.state.i === 0) {
+      return <div>
+        <MainPage name={me.name} role={me.role} id={0} triggerRender={j => this.setState({ i: j })} />
+        <Menu info={me.info} />
       </div>
-      <div className="viewmore" onClick={e => alert("Clicked")}>
-        <img className="arrow" src={require("./assets/doublearrow.png")} alt="logo" />
+    } else {
+      return <div>
+        <JavaPage name={me.name} role={me.role} id={1} triggerRender={j => this.setState({ i: j })} />
+        <Menu info={me.info} />
       </div>
-      <Menu info={me.info} />
-    </div>
-  );
+    }
+
+  }
+
+  render() {
+    return (
+      this.r()
+    );
+  }
 }

@@ -1,62 +1,6 @@
 @import './components/Menu.css';
-
-.app {
-  position: absolute;
-  /* background: #69bcf4, #30cc8b; */
-  background: linear-gradient(to bottom, #01FF70, #39CCCC);
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.app .viewmore {
-  position: absolute;
-  top: 85%;
-  width: 50px;
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  overflow: hidden;
-  outline: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  opacity: 0.8;
-  -webkit-animation: bounce 1s normal;
-}
-
-.app .viewmore:hover {
-  -webkit-animation: bounce 1s infinite;
-}
-
-.app .viewmore .arrow {
-  width: 80px;
-}
-
-.app .info {
-  width: 80%;
-  height: 20%;
-  display: flex;
-  flex-direction: column;
-}
-
-.app .info .name {
-  font-size: 90px;
-  font-family: 'Cardo-Bold';
-}
-
-.app .info .role {
-  font-size: 40px;
-  font-family: 'Cardo-Bold';
-}
-
+@import './components/Arrow.css';
+@import './components/pages/MainPage.css';
 @font-face {
   font-family: 'Gotham-Bold';
   font-style: normal;
