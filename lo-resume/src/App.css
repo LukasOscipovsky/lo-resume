@@ -1,6 +1,7 @@
 @import './components/Menu.css';
 @import './components/Arrow.css';
 @import './components/pages/MainPage.css';
+@import './components/pages/JavaPage.css';
 @font-face {
   font-family: 'Gotham-Bold';
   font-style: normal;

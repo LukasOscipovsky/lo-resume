@@ -1,4 +1,4 @@
-.app {
+.jpl {
     position: absolute;
     /* background: #69bcf4, #30cc8b; */
     background: linear-gradient(to bottom, #39CCCC, #FFDC00);
@@ -6,24 +6,35 @@
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.app .info {
-    width: 80%;
-    height: 20%;
+.jpl .techs {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.jpl .techs .tech {
+    background: white;
+    margin: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
-.app .info .name {
-    font-size: 90px;
-    font-family: 'Cardo-Bold';
+.jpl .techs .tech:hover {
+    -webkit-animation: bounce 1s normal;
 }
 
-.app .info .role {
-    font-size: 40px;
+.jpl .techs .tech .img {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+}
+
+.jpl .techs .tech .label {
+    font-size: 20px;
     font-family: 'Cardo-Bold';
 }
