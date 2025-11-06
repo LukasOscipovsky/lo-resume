@@ -13,7 +13,7 @@
     "@types/react-native": "^0.62.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-native": "^0.62.0",
+    "react-native": "^0.82.1",
     "react-scripts": "3.4.1",
     "typescript": "^3.7.5"
   },
